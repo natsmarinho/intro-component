@@ -1,5 +1,5 @@
 @import url("../css/reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
     --salmon: #FF7979;
@@ -33,4 +33,56 @@ body {
 .container-text {
     font-size: 1rem;
     line-height: 1.625rem;
+    font-weight: 500;
 }
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btn-trial {
+    color: white;
+    margin: auto;
+    text-align: center;
+    background-color: var(--purple);
+    width: 60%;
+    padding: 1rem 2.5rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.01675rem;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 0.625rem;
+}
+
+.btn-trial p {
+    font-weight: 400;
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    margin: auto;
+    gap: 1rem;
+    background-color: var(--white);
+    padding: 1.5rem;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 0.625rem;
+}
+
+.user-data {
+    border: 1px solid #DEDEDE;
+    border-radius: 0.3125rem;
+    padding: 1rem;
+}
+
+.user-data:focus {
+    outline: none;
+    border: 1px solid #5E54A4;
+}
+
