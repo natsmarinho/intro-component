@@ -112,3 +112,27 @@ body {
     font-weight: 700;
 }
 
+@media screen and (min-width: 1200px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texts {
+        width: 35%;
+        text-align: start;
+    }
+
+    .container-form {
+        padding-top: 5rem;
+    }
+
+    .btn-trial {
+        width: 103%;
+    }
+
+    .user-form {
+        width: 110%;
+    }
+}
