@@ -1,26 +1,47 @@
-const claimBtn = document.querySelector(".btn-claim").addEventListener("click", claim);
+
 const dataForm = document.querySelectorAll(".user-data");
 const msgError = document.querySelectorAll(".msg-error");
 const regexEmail = /^[^\.\s][\w\-]+(\.[\w\-]+)*@([\w-]+\.)+[\w-]{2,}$/;
 
-function setError() {
-    dataForm.forEach(element => {
-        element.style.border = "2px solid #FF7979";
-        msgError.forEach(mesage => {
-            mesage.style.display = "block";
-        })
-    });
+function setError(index) {
+    dataForm[index].style.border = "2px solid #FF7979";
+    msgError[index].style.display = "block";
 }
 
-function removeError() {
-    msgError.style.display = "none";
-    dataForm[i].style.border = "1px solid #DEDEDE"
+function removeError(index) {
+   dataForm[index].style.border = "1px solid #DEDEDE"; 
+   msgError[index].style.display = "none";
+    
 }
 
-function claim() {
-    if(regexEmail.test(dataForm[2].value)) {
-        removeError();
+function nameValidate() {
+    if (dataForm[0].value.length < 3) {
+        setError(0);
     } else {
-        setError();
+        removeError(0);
+    }
+}
+
+function lastNameValidate() {
+    if (dataForm[1].value.length < 3) {
+        setError(1);
+    } else {
+        removeError(1);
+    }
+}
+
+function emailValidate() {
+    if (!regexEmail.test(dataForm[2].value)) {
+        setError(2);
+    } else {
+        removeError(2);
+    }
+}
+
+function passwordValidate() {
+    if(dataForm[3].value.length < 8) {
+        setError(3);
+    } else {
+        removeError(3);
     }
 }
