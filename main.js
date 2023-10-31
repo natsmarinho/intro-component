@@ -2,16 +2,18 @@
 const dataForm = document.querySelectorAll(".user-data");
 const msgError = document.querySelectorAll(".msg-error");
 const regexEmail = /^[^\.\s][\w\-]+(\.[\w\-]+)*@([\w-]+\.)+[\w-]{2,}$/;
+const iconError = document.querySelectorAll(".error-icon");
 
 function setError(index) {
     dataForm[index].style.border = "2px solid #FF7979";
     msgError[index].style.display = "block";
+    iconError[index].style.display = "block";
 }
 
 function removeError(index) {
    dataForm[index].style.border = "1px solid #DEDEDE"; 
    msgError[index].style.display = "none";
-    
+   iconError[index].style.display = "none";
 }
 
 function nameValidate() {

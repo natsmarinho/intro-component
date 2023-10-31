@@ -20,14 +20,30 @@
             </div>
 
             <form class="user-form">
-                <input type="text" name="first-user-name" id="first-name" placeholder="First Name" class="user-data" oninput="nameValidate()">
-                <span class="msg-error">First Name cannot be empty</span>
-                <input type="text" name="last-user-name" id="last-name" placeholder="Last Name" class="user-data" oninput="lastNameValidate()">
-                <span class="msg-error">Last Name cannot be empty</span>
-                <input type="email" name="user-email" id="email-address" placeholder="Email Address" class="user-data" oninput="emailValidate()">
-                <span class="msg-error">Looks like this is not an email</span>
-                <input type="password" name="user-password" id="password" placeholder="Password" class="user-data" oninput="passwordValidate()">
-                <span class="msg-error">Password cannot be empty</span>
+                <div class="input-container">
+                     <input type="text" name="first-user-name" id="first-name" placeholder="First Name" class="user-data" oninput="nameValidate()">
+                    <img src="./src/images/error-icon.svg" alt="Ícone de erro" class="error-icon">
+                    <span class="msg-error">First Name cannot be empty</span>
+                </div>
+
+               <div class="input-container">
+                    <input type="text" name="last-user-name" id="last-name" placeholder="Last Name" class="user-data" oninput="lastNameValidate()">
+                    <img src="./src/images/error-icon.svg" alt="Ícone de erro" class="error-icon">
+                    <span class="msg-error">Last Name cannot be empty</span>
+               </div>
+
+               <div class="input-container">
+                    <input type="email" name="user-email" id="email-address" placeholder="Email Address" class="user-data" oninput="emailValidate()">
+                    <img src="./src/images/error-icon.svg" alt="Ícone de erro" class="error-icon">
+                    <span class="msg-error">Looks like this is not an email</span>
+               </div>
+                
+               <div class="input-container">
+                    <input type="password" name="user-password" id="password" placeholder="Password" class="user-data" oninput="passwordValidate()">
+                    <img src="./src/images/error-icon.svg" alt="Ícone de erro" class="error-icon">
+                    <span class="msg-error">Password cannot be empty</span>
+               </div>
+               
                 <input type="button" value="Claim your free trial" class="btn-claim">
 
                 <p class="terms">By clicking the button, you are agreeing to our <span class="terms-highlight">Terms and Services</span></p>
