@@ -3,6 +3,7 @@ const dataForm = document.querySelectorAll(".user-data");
 const msgError = document.querySelectorAll(".msg-error");
 const regexEmail = /^[^\.\s][\w\-]+(\.[\w\-]+)*@([\w-]+\.)+[\w-]{2,}$/;
 const iconError = document.querySelectorAll(".error-icon");
+const btnClaim = document.querySelector(".btn-claim")
 
 function setError(index) {
     dataForm[index].style.border = "2px solid #FF7979";
@@ -46,4 +47,12 @@ function passwordValidate() {
     } else {
         removeError(3);
     }
+}
+
+btnClaim.addEventListener("click", claim);
+function claim() {
+    nameValidate();
+    lastNameValidate();
+    emailValidate();
+    passwordValidate();
 }

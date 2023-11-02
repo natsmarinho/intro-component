@@ -122,6 +122,11 @@ body {
     font-size: 0.9375rem;
 }
 
+.btn-claim:hover {
+    background: #77E2B3;
+    box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.09) inset;
+}
+
 .terms {
     font-weight: 500;
     line-height: 1.3125rem;
