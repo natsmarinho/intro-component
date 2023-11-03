@@ -12,6 +12,23 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url("../images/background.png");
+    overflow-x: hidden;
+}
+
+.container-msg-success {
+    background: var(--white);
+    width: 50%;
+    padding-block: 1.5rem;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 0.625rem;
+    position: absolute;
+    top: 2rem;
+    transform: translateX(200%);
+}
+
+.msg-success {
+    color: var(--green);
+    text-align: center;
 }
 
 .texts {
@@ -145,6 +162,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 3rem;
     }
 
     .texts {
