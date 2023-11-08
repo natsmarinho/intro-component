@@ -23,12 +23,20 @@ body {
     border-radius: 0.625rem;
     position: absolute;
     top: 2rem;
-    transform: translateX(200%);
+    transform: translateX(-100%);
+    display: none;
+}
+
+
+.show-msg-sucess {
+    transform: translateX(50%);
+    transition: transform .5s ease-in;
 }
 
 .msg-success {
     color: var(--green);
     text-align: center;
+    display: block;
 }
 
 .texts {
