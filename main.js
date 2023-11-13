@@ -50,12 +50,27 @@ function passwordValidate() {
     }
 }
 
+function refresh() {
+    for (let i = 0; i < dataForm.length; i++) {
+        dataForm[i].value = "";
+    }
+}
+
 btnClaim.addEventListener("click", claim);
 function claim() {
     nameValidate();
     lastNameValidate();
     emailValidate();
     passwordValidate();
-    msgSuccess.classList.add("show-msg-sucess");
-    msgSuccess.style.display = "block";
+    refresh();
+
+    setTimeout(function() {
+        msgSuccess.classList.add("show-container");
+    }, 100)
+    
+    setTimeout(function() {
+    msgSuccess.classList.remove("show-container");
+    }, 3000)
 }
+
+

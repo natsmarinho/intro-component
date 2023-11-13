@@ -23,14 +23,9 @@ body {
     border-radius: 0.625rem;
     position: absolute;
     top: 2rem;
-    transform: translateX(-100%);
-    display: none;
-}
-
-
-.show-msg-sucess {
+    opacity: 0;
     transform: translateX(50%);
-    transition: transform .5s ease-in;
+    transition: opacity 1s ease-in-out;
 }
 
 .msg-success {
@@ -38,6 +33,11 @@ body {
     text-align: center;
     display: block;
 }
+
+.container-msg-success.show-container {
+    opacity: 1;
+}
+
 
 .texts {
     text-align: center;
