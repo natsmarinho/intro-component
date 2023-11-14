@@ -6,16 +6,16 @@ const iconError = document.querySelectorAll(".error-icon");
 const btnClaim = document.querySelector(".btn-claim");
 const msgSuccess = document.querySelector(".container-msg-success");
 
-function setError(index) {
-    dataForm[index].style.border = "2px solid #FF7979";
-    msgError[index].style.display = "block";
-    iconError[index].style.display = "block";
+function setError(i) {
+    dataForm[i].style.border = "2px solid #FF7979";
+    msgError[i].style.display = "block";
+    iconError[i].style.display = "block";
 }
 
-function removeError(index) {
-   dataForm[index].style.border = "1px solid #DEDEDE"; 
-   msgError[index].style.display = "none";
-   iconError[index].style.display = "none";
+function removeError(i) {
+   dataForm[i].style.border = "1px solid #DEDEDE"; 
+   msgError[i].style.display = "none";
+   iconError[i].style.display = "none";
 }
 
 function nameValidate() {
@@ -56,6 +56,26 @@ function refresh() {
     }
 }
 
+function showMsg() {
+  let inputsPreenchidos = true;
+  for(let i = 0; i < dataForm.length; i++) {
+    if(!dataForm[i].value) {
+        inputsPreenchidos = false;
+        break;
+    }
+  }
+
+  if(inputsPreenchidos == true) {
+    setTimeout(function() {
+            msgSuccess.classList.add("show-container");
+        }, 100)
+        
+        setTimeout(function() {
+        msgSuccess.classList.remove("show-container");
+        }, 3000)
+  }
+}
+
 btnClaim.addEventListener("click", claim);
 function claim() {
     nameValidate();
@@ -63,14 +83,7 @@ function claim() {
     emailValidate();
     passwordValidate();
     refresh();
-
-    setTimeout(function() {
-        msgSuccess.classList.add("show-container");
-    }, 100)
-    
-    setTimeout(function() {
-    msgSuccess.classList.remove("show-container");
-    }, 3000)
+    showMsg();
 }
 
 
