@@ -56,25 +56,6 @@ function refresh() {
     }
 }
 
-function showMsg() {
-  let inputsPreenchidos = true;
-  for(let i = 0; i < dataForm.length; i++) {
-    if(!dataForm[i].value) {
-        inputsPreenchidos = false;
-        break;
-    }
-  }
-
-  if(inputsPreenchidos == true) {
-    setTimeout(function() {
-            msgSuccess.classList.add("show-container");
-        }, 100)
-        
-        setTimeout(function() {
-        msgSuccess.classList.remove("show-container");
-        }, 3000)
-  }
-}
 
 btnClaim.addEventListener("click", claim);
 function claim() {
@@ -83,7 +64,16 @@ function claim() {
     emailValidate();
     passwordValidate();
     refresh();
-    showMsg();
+    
+    if (Array.from(msgError).every(msg => msg.style.display === "none")) {
+        setTimeout(function() {
+        msgSuccess.classList.add("show-container");
+        }, 100);
+        setTimeout(function() {
+        msgSuccess.classList.remove("show-container");
+        }, 3000);
+    }
+    
 }
 
 
