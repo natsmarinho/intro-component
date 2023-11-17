@@ -1,4 +1,4 @@
-<h1>Titulo ou Arte do Projeto</h1> 
+<h1>Intro component</h1> 
 
 <p align="center">
 <img src="https://img.shields.io/static/v1?label=Github&message=deploy&color=blue&style=for-the-badge&logo=github"/>
